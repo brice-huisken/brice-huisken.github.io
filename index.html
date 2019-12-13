@@ -8,6 +8,7 @@
   analytics.load("GMQRi8euz0ltWaDIWxfOVKojOajSewlH");
   analytics.page();
   }}();
+
 </script>
 
 </head> 
@@ -50,7 +51,14 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
+        var link = document.getElementById('free-trial-link');
+
+        analytics.trackLink(link, 'Clicked Free-Trial Link', {
+          plan: 'Enterprise'
+        });
       }
 </script>
+    <p><a href="http://www.google.com" target="_blank" id="free-trial-link">Click here for a free trial</a></p>  
+
 </body> 
 </html>
