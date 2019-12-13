@@ -13,6 +13,22 @@
 
 </head> 
 <body> 
+     <p><a href="http://www.google.com" target="_blank" id="free-trial-link">Click here to start your free trial</a></p>  
+    <script type="text/javascript">
+        var link = document.getElementById('free-trial-link');
+
+        analytics.trackLink(link, 'Clicked Free-Trial Link', {
+          plan: 'Enterprise',
+          location: 'Center',
+          color: 'Green',
+          text: 'Signup Here!',
+          CTA: 'Signup',
+          category: 'Home Page',
+          type: 'Button',
+          pageTitle: document.title
+        });
+      }
+    </script>
 <h1>What is your favorite place to travel?</h1> 
 <p>I am building a directory of the sweetest travel destinations.</p>  
 <form name="travel" onsubmit="identify(event)">
@@ -53,21 +69,6 @@
         });
 
 </script>
-    <p><a href="http://www.google.com" target="_blank" id="free-trial-link">Click here to start your free trial</a></p>  
-    <script type="text/javascript">
-        var link = document.getElementById('free-trial-link');
 
-        analytics.trackLink(link, 'Clicked Free-Trial Link', {
-          plan: 'Enterprise',
-          location: 'Center',
-          color: 'Green',
-          text: 'Signup Here!',
-          CTA: 'Signup',
-          category: 'Home Page',
-          type: 'Button',
-          pageTitle: document.title
-        });
-      }
-    </script>
 </body> 
 </html>
