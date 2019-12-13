@@ -51,14 +51,23 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
+
+</script>
+    <p><a href="http://www.google.com" target="_blank" id="free-trial-link">Click here to start a free trial</a></p>  
+<script>
         var link = document.getElementById('free-trial-link');
 
         analytics.trackLink(link, 'Clicked Free-Trial Link', {
-          plan: 'Enterprise'
+          plan: 'Enterprise',
+          location: 'Center',
+          color: 'Green',
+          text: 'Signup Here!',
+          CTA: 'Signup',
+          category: 'Home Page',
+          type: 'Button',
+          pageTitle: document.title
         });
       }
-</script>
-    <p><a href="http://www.google.com" target="_blank" id="free-trial-link">Click here for a free trial</a></p>  
-
+    </script>
 </body> 
 </html>
